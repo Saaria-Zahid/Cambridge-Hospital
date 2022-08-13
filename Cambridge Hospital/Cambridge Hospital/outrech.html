@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- EXTERNAL LINK -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <style></style>
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <!-- extrnal link end -->
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <!-- AOS Animation link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cambridge Hospital</title>
+     <!-- Covid Api -->
+     <script>
+        fetch("https://api.covid19api.com/summary").then(function(res){
+                return res.json()
+            }).then(function(respon){
+                console.log(respon)
+                var i;
+            for(i=0;i<respon.length;i++){
+                console.log(respon[1].NewConfirmed)
+                
+            }
+            document.getElementById("pera").innerText = "New Worldwide Confirmed Cases" + "  " + "  " + "(" + respon.Global.NewConfirmed + ")"})
+    </script>
+    <!-- api end -->
+</head>
+
+<body>
+
+
+    <div>
+
+        <!-- Navbar Start -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container-fluid">
+                <div class="col-md-3">
+                <img class="img-fluid  navbar-brand" src="./img/corona.png" width="30px" height="30px" alt="">
+                <span class="logo fw-bold nav-1-ul active text-white">Covid-info</span>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav  fs-6 fw-bold mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./covid vacancine.html">Covid-19 Testing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./kids.html">Covid-19 Vaccine for Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./Vaccine for Adults.html">Covid-19 Vaccine for Adult</a>
+                        </li>
+                    </ul>
+                    <span class="pt-3 ps-1">
+                    <p id="pera" class="text-white nav-1-ul nav-link active fw-bold fs-6 text-end">No Internet Connection</p>
+                   </span>
+                </div>
+            
+
+        </nav>
+
+        <div class="container-fluid ">
+            <div class="row bg-secondary bg-opacity-10">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 fw-bold call fs-5 p-3">
+                    <i class="fa-solid call fa-phone"></i><span class="call"> Call to Schedule : +923190263875</span>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+
+
+
+                    <button class="btn btn-outline-danger m-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="fa-solid fa-calendar"></i>&nbsp Schedule Online</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header bg-danger text-white ">
+                            <p class="text-center pt-3" id="offcanvasRightLabel">Call to Schedule : +923190263875</p>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Neurologists
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-danger bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Family physicians
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-info bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Obstetricians and gynecologists.
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-dark bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light text-black sticky-md-top fixed-top bg-white nav">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold logo fs-5" href="./index.html"><img class="rounded-circle" src="./img/logo.jpg"
+                    width="50px" height="50px" alt="">&nbsp; Cambridge
+                    Hospital</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-font justify-content-center pe-5 me-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav fs-5 nav-2-item  ">
+                        <li class="nav-item">
+                            <a class="nav-link  cool-link " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./facility.html">Facility</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link main-active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./CLINICAL-service.html">Clinical service</a></li>
+                                <li><a class="dropdown-item" href="./blood.html">Blood Center</a></li>
+                                <li><a class="dropdown-item main-active" href="./outrech.html">Outrech Programs</a></li>
+                            </ul>
+
+
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./vacancies.html">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./donor.html">Donors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./location.html">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Doctors
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda Jabeen.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                            </ul>
+
+
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar End -->
+        <div class="container-fluid">
+            <div class="row bg-secondary bg-opacity-10">
+                <p class="pt-4 text-danger cool-link fw-bold fs-3">Outrech</p>
+            </div>
+        </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <p class="logo cool-link fs-4 p-5 text-danger">Community Health Directorate</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">The public health outreach programs are managed by Community Health Directorate (CHD) — the public arm of the Cambridge Hospital and Health Network (IHHN) — implementing community and facility-based programs across the country.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">These programs focus on infectious diseases, Maternal and Neonatal Child Health (MNCH), non-communicable diseases, global surgery, mental health, and primary care programs across all campuses and in communities. The Directorate, with the support of some national and international stakeholders and donors is running multiple public health projects.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">Its scope of service includes implementation at scale of public health programs and comprehensive primary care facilities across the country. Scaling-up innovative approaches, mobile health technology, and a strong network of community health workers, CHD’s service delivery in the community and at the primary level is closely coordinated with local secondary and tertiary care facilities. CHD successfully implemented interventions at hospital and community settings across Pakistan and have been able to impact over 1 million people, so far.</p>
+                  <p class="logo cool-link fs-4 p-5 text-danger">HIV PROGRAM</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">The antiretroviral therapy (ARV) treatment center at Cambridge Hospital & Health Network, Korangi focuses on scaling-up programmatic management of people who inject drugs affected by HIV, while new Intravenous Drug Users (IVDUs) are registered and put on ARV treatment.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">The programmatic management approach introduced support to patients beyond clinical care by deploying a team that would facilitate regular follow-ups at the household; counseling for adherence, depression, and anxiety to help decrease the loss to follow-up.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">Pakistan is facing an epidemic of HIV. Most of the victims are persons who inject drugs; men who have sex with men; transgender; and female sex workers. These populations have specific dynamics and they are the most marginalized groups. IHHN started a sole clinic for key affected population in October 2018. The HIV program incorporates Voluntary Counselling and Testing (VCT), Antiretroviral Therapy clinic and adherence, family counseling, and outreach.</p>
+                  <p class="logo cool-link fs-4 p-5 text-danger">HEPATITIS C (HCV) CONTROL PROGRAM</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">Since its inception in October 2016, the HCV Control program has been replicated across eight rural and urban sites of Pakistan. Approximately 122,478 patients (as of July 2020) above 13 years have been screened using WHO-approved rapid diagnostic test kits.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">The majority of the patients fall between 35 to 44 years with 50 per cent being females. This has been possible through the training of up to family medicine doctors, nurses, and health workers across all eight rural and urban sites.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">Decentralizing HCV screening through integration in routine patient process flow of family medicine clinics (at Primary Care Program sites), ‘Aao TB Mitao’ initiative, community-based activities run by Community Engagement Center (CEC) and Emergency Department services has helped identify confirmed cases, who could have gone undetected and possibly presented at a later untreatable stage of illness.</p>
+                  <p class="logo fs-5 text-black-50 fw-bold">The program continues to expand its scope of prevention, screening, and treatment activities to create awareness and actively identify suspected cases to slow down community-based transmission, hence contributing to curb this silent epidemic — a public health emergency in Pakistan.</p>
+                  
+              </div>
+          </div>
+
+          
+      </div>
+
+
+<hr>
+
+        <!-- Footer Start-->
+
+        <div class="container-fluid bg-secondary bg-opacity-10 text-black-50">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="./index.html"><img class="rounded-circle mb-5  mt-5"
+                            src="./img/logo.jpg" width="60px" height="60px" alt=""><span
+                            class="fw-bold ms-2  fs-4 logo">Cambridge
+                            Hospital</span></a>
+
+                    <ul class="fs-6">
+
+                        <a class="cool-link text-black  pt-2 pe-3" href="./index.html">Privacy Policy</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Terms & Condition</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">For Employees</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">HIPAA Notice</a>
+
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Vacancies</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Non Discrimation Notice</a>
+
+                    </ul>
+
+                    <ul class="fst-italic pt-5">
+                        Copyright © 2022 Cambridge Hospital
+                    </ul>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p class="mt-5 fs-3 pt-2 text-black">Sign Up For Our E-Newsletter</p>
+                    <p class="mt-5 fs-5 ">Get health news and advice you need to live your best, delivered right to your
+                        inbox every month: The
+                        Healthy@UH e-newsletter.</p>
+                </div>
+
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-outline-danger mb-5 mt-5 btn-group-lg">Sign Up Now &nbsp;<i
+                            class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid bg-danger bg-opacity-10">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Karachi</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Karachi Branch</p>
+                    <p class="ps-5">Plot C-76, Sector 31/5, Opposite Millat Society
+                        Liaqtabab, Karachi -75190, Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Lahore</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Lahore Branch</p>
+                    <p class="ps-5 pb-3">Plot C-76, Sector 31/5, Opposite Lahore Main Metro Station, Lahore -726390,
+                        Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Donate Now</p> <br>
+                    <p class="fs-5 ps-5 cool-link">Doorstep Collection:</p>
+                    <p class="ps-5 pb-3">
+                        +923 111 111 880
+                        Karachi +92 21 111 111 880
+                        Lahore +92 42 111 111 880
+                        Donate in-person at our Collection Centers
+                        Write to us at:crd@tih.org.pk <br>
+                        <br>
+                        Cambridge Hospital & Health Network is a not-for-profit <br>
+                        company registered under section 42 of the <br>
+                        Companies Ordinance 1984. The company has tax exemptions <br>
+                        under the Income Tax Ordinance 2001. <br> <br>
+                        <br>
+                        Charity Registration No. PCP-R2/2019/234 <br>
+
+                        National Tax No. 3162706-4
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Quic Link</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i
+                                class="fa-brands fa-facebook"></i></a>&nbsp
+                        Facebook</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i
+                                class="fa-brands fa-instagram"></i></a>&nbsp
+                        Instagram</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i
+                                class="fa-solid fa-envelope"></i></a>&nbsp
+                        Gmail</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i
+                                class="fa-brands fa-twitter"></i></a>&nbsp
+                        Twitter</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i class="fa-solid fa-phone"></i></a>&nbsp
+                        Call</p>
+                    <p class="pt-3 ps-5"><a href="#" class="text-danger fs-5"><i
+                                class="fa-brands fa-youtube"></i></a>&nbsp
+                        Youtube</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-danger">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-white pt-3 fs-6 text-center">Copyright All Right Reserve © 2022 Cambridge Hospital
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer End -->
+    <script type='text/javascript'></script>
+    <script src="./javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

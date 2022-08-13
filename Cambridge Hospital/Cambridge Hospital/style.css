@@ -1,0 +1,237 @@
+*{
+    scroll-behavior: smooth;
+   
+}
+.nav-1-ul:hover {
+    background-color: rgb(255, 255, 255);
+    color: brown !important;
+}
+
+
+.top{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99 !important;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 1s ease-in-out !important;
+}
+
+.nav1-info :hover {
+    color: white !important;
+}
+
+.call :hover {
+    color: brown !important;
+}
+
+.nav {
+    width: 100% !important;
+    position: sticky !important;
+    box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    transition: all 1s ease-in-out;
+    z-index: 99 !important;
+}
+
+.nav-font{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+nav :hover {
+    color: rgb(255, 40, 40) !important;
+}
+
+
+
+.logo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(44, 43, 43) !important;
+}
+
+.line {
+    width: 0px;
+    height: 0px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.line :hover {
+    transition: all 1s ease-in-out;
+    width: 20px;
+    height: 1px;
+    background-color: black;
+
+}
+
+.inf:hover {
+    color: black !important;
+}
+
+
+
+.cool-link {
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: brown;
+    transition: all ease-in 0.3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+}
+
+.bg1{
+    background-image: url(./img/doc2.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+.bg2{
+    background-image: url(./img/doc1.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+.bg3{
+    background-image: url(./img/doc3.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+.bg4{
+    background-image: url(./img/hospital-721239_1920.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+.bg5{
+    background-image: url(./img/wood.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+.bg6{
+    background-image: url(./img/road.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+} 
+
+.bg7{
+    background-image: url(./img/red.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+.main-active{
+    color: brown !important;
+}
+
+.my-card:hover{
+    transform: scale(1.1) !important;
+   transition: all 1s ease-out !important;
+}
+
+::-webkit-scrollbar{
+  
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: brown;
+    border: 2px solid white;
+   
+}
+::-webkit-scrollbar-corner{
+    background-color: white;
+
+}
+
+::-webkit-scrollbar-button{
+    background-color: white;
+    height: 0px;
+}
+
+.my-form-control{
+    background-color: rgba(165, 42, 42, 0.596) !important;
+    color: rgb(255, 255, 255) !important;
+}
+.my-form-control::placeholder{
+   
+    color: white !important;
+}
+
+.my-box {
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none !important;
+}
+
+.my-box::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(104, 104, 104, 0.205);
+    box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.507);
+-webkit-box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.514);
+-moz-box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.555);
+    transition: all ease-in 1.5s;
+}
+
+.my-box:hover::after {
+    width: 100%;
+    
+    transition: all ease-in-out 1.10s;
+}
+

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- EXTERNAL LINK -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <style></style>
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <!-- extrnal link end -->
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <!-- AOS Animation link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cambridge Hospital</title>
+    <!-- Covid Api -->
+    <script>
+        fetch("https://api.covid19api.com/summary").then(function (res) {
+            return res.json()
+        }).then(function (respon) {
+            console.log(respon)
+            var i;
+            for (i = 0; i < respon.length; i++) {
+                console.log(respon[1].NewConfirmed)
+
+            }
+            document.getElementById("pera-top").innerText = "New Worldwide Confirmed Cases" + "  " + "  " + "(" + respon.Global.NewConfirmed + ")"
+        })
+    </script>
+    <!-- api end -->
+</head>
+
+<body>
+
+
+    <div>
+
+        <!-- Navbar Start -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container-fluid">
+                <div class="col-md-3">
+                    <img class="img-fluid  navbar-brand" src="./img/corona.png" width="30px" height="30px" alt="">
+                    <span class="logo fw-bold nav-1-ul active text-white">Covid-info</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav  fs-6 fw-bold mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./covid vacancine.html">Covid-19 Testing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./kids.html">Covid-19 Vaccine for Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  nav-1-ul active" href="./Vaccine for Adults.html">Covid-19 Vaccine for
+                                Adult</a>
+                        </li>
+                    </ul>
+                    <span class="pt-3 ps-1">
+                        <p id="pera-top" class="text-white nav-1-ul nav-link active fw-bold fs-6 text-end">No Internet
+                            Connection</p>
+                    </span>
+                </div>
+
+
+        </nav>
+
+        <div class="container-fluid ">
+            <div class="row bg-secondary bg-opacity-10">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 fw-bold call fs-5 p-3">
+                    <i class="fa-solid call fa-phone"></i><span class="call"> Call to Schedule : +923190263875</span>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+
+
+
+                    <button class="btn btn-outline-danger m-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="fa-solid fa-calendar"></i>&nbsp Schedule Online</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header bg-danger text-white ">
+                            <p class="text-center pt-3" id="offcanvasRightLabel">Call to Schedule : +923190263875</p>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Neurologists
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-danger bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid
+                                                        Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr.
+                                                        Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan
+                                                    </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah
+                                                        M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed
+                                                        Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Family physicians
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-info bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid
+                                                        Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr.
+                                                        Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat
+                                                        Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma
+                                                        Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub
+                                                        Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali
+                                                        Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah
+                                                        M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed
+                                                        Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Obstetricians and gynecologists.
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-dark bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid
+                                                        Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr.
+                                                        Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat
+                                                        Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma
+                                                        Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub
+                                                        Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali
+                                                        Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah
+                                                        M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed
+                                                        Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light text-black sticky-md-top fixed-top bg-white nav">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold logo fs-5" href="./index.html"><img class="rounded-circle" src="./img/logo.jpg"
+                    width="50px" height="50px" alt="">&nbsp; Cambridge
+                    Hospital</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-font justify-content-center pe-5 me-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav fs-5 nav-2-item  ">
+                        <li class="nav-item">
+                            <a class="nav-link  cool-link " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./facility.html">Facility</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./CLINICAL-service.html">Clinical service</a></li>
+                                <li><a class="dropdown-item" href="./blood.html">Blood Center</a></li>
+                                <li><a class="dropdown-item" href="./outrech.html">Outrech Programs</a></li>
+                            </ul>
+
+
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./vacancies.html">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./donor.html">Donors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./location.html">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Doctors
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                        Jabeen.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                            </ul>
+
+
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar End -->
+        <!-- covid api -->
+        <div class="bg2">
+            <div class="container-fluid bg-white pt-5 pb-5 bg-opacity-75">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="fw-bold fs-1 logo pt-5 pb-3 text-black-50">Covid-19 Live Updates</p>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera">Please
+                            Check Your Internet Connection</p>
+                        <br>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera1">
+                            Please Check Your Internet Connection</p>
+                        <br>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera2">
+                            Please Check Your Internet Connection</p>
+                        <br>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera3">
+                            Please Check Your Internet Connection</p>
+                        <br>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera4">
+                            Please Check Your Internet Connection</p>
+                        <br>
+                        <p class="fs-3 shadow logo pt-3 pb-3 fw-bold cool-link text-danger text-center" id="pera5">
+                            Please Check Your Internet Connection</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- covid api end -->
+        <section>
+            <div class="bg">
+                <div class="container">
+                    <div class="row pt-5 mb-5 pb-5">
+                        <div class="col-md-7 bg-danger bg-opacity-10 col-sm-12 border">
+                            <p class="h1 text-black-50 mt-4 ms-4 me-4 pb-3 fw-normal">Get the Facts About COVID-19
+                                Vaccines
+                            </p>
+                            <p class="h5 mb-4 ms-4 me-4 fw-normal logo">Vaccines that may prevent COVID-19, the disease
+                                caused by the coronavirus, are an important step toward stemming the worldwide pandemic.
+                                Find out about the authorized vaccines, how they work, possible side effects, and the
+                                benefits of being vaccinated.</p>
+                        </div>
+                    </div>
+                    <!-- Next Row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <hr>
+
+                                <p class="mt-5 text-black-50 h2">COVID-19 Vaccine Booster Shots</p>
+
+                                <p class="mt-4 fs-5 logo">Those who are 12 years old or older and have been fully
+                                    vaccinated
+                                    against COVID-19 may be eligible for a booster dose.</p>
+
+                                <p class="mt-4 fs-5 logo">If you received a two-dose series of the Pfizer vaccine, you
+                                    are
+                                    eligible for a booster at least five months after completing the series. If you
+                                    received
+                                    a Moderna vaccine, you are eligible for a booster at least six months after
+                                    completing
+                                    the two-dose series.</p>
+
+                                <p class="mt-4 fs-5 logo">
+                                    Anyone who received the single-dose Johnson & Johnson COVID-19 vaccine is eligible
+                                    for a
+                                    second/booster dose at least two months after receiving the first dose.
+                                </p>
+
+                                <p class="mt-4 fs-5 logo">
+                                    If you are eligible for a booster, you can choose which vaccine – Pfizer or Moderna
+                                    –
+                                    you receive as a booster dose. Some people may prefer the vaccine type that they
+                                    originally received; others may prefer to get a different booster.
+                                </p> <br><br>
+                                <hr>
+
+                                <p class="mt-5 pt-3 text-black-50 h2">COVID-19 Vaccine Third Doses for People with
+                                    Moderate
+                                    to
+                                    Severe Immunosuppression</p>
+
+                                <p class="mt-4 fs-5 logo">
+                                    Third doses are authorized to be administered at least 28 days after the two-dose
+                                    regimen of the same vaccine for people age 18 and older for the Moderna vaccine and
+                                    people age 12 and older for the Pfizer-BioNTech vaccine. The third dose is different
+                                    from boosters as they are given in a shorter time frame and the patient must have
+                                    had a
+                                    solid organ transplant or have been diagnosed with a condition considered to have an
+                                    equivalent level of moderate to severe immune compromise:
+                                </p><br>
+                                <hr><br>
+
+                                <ul>
+                                    <li class=" ms-4 mt-4 fs-5 logo">Active or recent treatment for solid tumor and
+                                        hematologic malignancies</li>
+                                    <li class=" ms-4 fs-5 logo">Receipt of solid-organ or recent hematopoietic stem cell
+                                        transplants</li>
+                                    <li class=" ms-4 fs-5 logo">Severe primary immunodeficiency</li>
+                                    <li class=" ms-4 fs-5 logo">Advanced or untreated HIV infection</li>
+                                    <li class=" ms-4 fs-5 logo">Active treatment with high-dose corticosteroids,
+                                        alkylating
+                                        agents, antimetabolites, tumor-necrosis (TNF) blockers and other biologic agent
+                                        that
+                                        are immunosuppressive or immunomodulatory</li>
+                                    <li class=" ms-4 fs-5 logo">Chronic medical conditions such as asplenia and chronic
+                                        renal disease that may be associated with varying degrees of immune deficit</li>
+                                </ul>
+
+                                <p class="mt-5 pt-3 text-black-50 h2">Concerned About Health Insurance or Immigration
+                                    Status?</p>
+                                <p class="mt-3  fw-bold text-dark h5">COVID-19 vaccines are 100 percent free for every
+                                    individual who lives in the United States, even if you do not have insurance.</p>
+
+                                <p class="mt-5 fs-5 logo">UH charges an administrative fee to cover the costs of
+                                    administering the COVID-19 vaccine, which usually is paid for by insurance. When a
+                                    patient is uninsured, the U.S. Health Resources and Services Administration (HRSA)
+                                    Uninsured Program pays the fee.</p>
+
+                                <p class="mt-5 fs-5 logo">There is no charge to a patient for the vaccine.</p>
+
+                                <p class="mt-3  fw-bold text-dark h5">n addition, everyone is eligible to receive
+                                    COVID-19
+                                    vaccine, whatever their immigration status.</p>
+
+                                <p class="mt-5 fs-5 logo">Vaccinations paid for by the federal government will not
+                                    affect
+                                    anyone’s immigration status and information will not be shared with immigration
+                                    agencies, according to the HRSA.</p>
+
+                                <p class="mt-4 fs-5 logo">You do not need to provide a Social Security Number or
+                                    government
+                                    ID to receive a COVID-19 vaccine.</p><br>
+                                <hr><br>
+
+                                <p class="mt-2 text-black-50 h2">I Received the Johnson & Johnson Vaccine. Should I Be
+                                    Concerned?</p>
+
+                                <p class="mt-5 fs-5 logo">The CDC and FDA have lifted the temporary pause in the use of
+                                    Johnson & Johnson’s Janssen COVID-19 vaccine and is again recommending its use.</p>
+
+                                <p class="mt-5 fs-5 logo">However, women younger than age 50 should be aware of a rare
+                                    but
+                                    increased risk of thrombosis with thrombocytopenia syndrome with the vaccine, the
+                                    CDC
+                                    says. The CDC and FDA received reports of this rare and serious type of blood clot
+                                    with
+                                    low platelets that developed in six people who received the Johnson & Johnson
+                                    vaccine.
+                                    Nearly all were adult women younger than age 50.</p>
+                                <p class="mt-5 fs-5 logo">The six cases developed out of nearly 7 million Johnson &
+                                    Johnson
+                                    vaccines that have been given across the United States.</p>
+                                <p class="mt-5 fs-5 logo">The CDC recommends continued use of the vaccine after a review
+                                    of
+                                    the available data, which shows the vaccine's known and potential benefits outweigh
+                                    the
+                                    known and potential risks.</p>
+                                <p class="mt-5 fs-5 logo">If you got the Johnson & Johnson vaccine more than three
+                                    weeks,
+                                    ago, know that your risk of developing a blood clot is very low.</p>
+                                <p class="mt-5 fs-5 logo">If you got this vaccine within the last three weeks, your risk
+                                    of
+                                    developing a blood clot also is very low. However, be on the lookout for possible
+                                    symptoms of a blood clot:</p>
+
+                                <ul>
+                                    <li class=" ms-4 mt-4 fs-5 logo">Severe headache</li>
+                                    <li class=" ms-4 fs-5 logo">Blurred vision</li>
+                                    <li class=" ms-4 fs-5 logo">Fainting</li>
+                                    <li class=" ms-4 fs-5 logo">Seizures</li>
+                                    <li class=" ms-4 fs-5 logo">Pain in your abdomen (chest or stomach)</li>
+                                    <li class=" ms-4 fs-5 logo">Leg pain or swelling</li>
+                                    <li class=" ms-4 fs-5 logo">Shortness of breath</li>
+                                </ul>
+
+                                <p class="mt-5 fs-5 logo"><b>Get medical care right away</b> if you have any of these
+                                    symptoms and got the Johnson & Johnson COVID-19 vaccine within the last few weeks.
+                                    If
+                                    you have any questions at all, call your health care provider.</p><br>
+                                <hr><br>
+
+
+                                <p class="mt-2 text-black-50 h2">I’ve Been Fully Vaccinated. Now What?</p>
+
+                                <p class="mt-5 fs-5 logo">People who have been fully vaccinated can add back some
+                                    activities
+                                    that were stopped because of the pandemic. Other habits will need to be maintained
+                                    for
+                                    now to help stop the spread of COVID-19.</p>
+
+                                <p class="mt-2 text-black-50 h2">What does it mean to be fully vaccinated?</p>
+
+                                <p class="mt-5 fs-5 logo">You’re fully vaccinated:</p>
+
+                                <ul>
+                                    <li class=" ms-4 fs-5 logo">Two weeks after your second dose of a two-dose vaccine,
+                                        such
+                                        as the Pfizer or Moderna vaccines, or</li>
+                                    <li class=" ms-4 fs-5 logo">Two weeks after a single-dose vaccine, such as the
+                                        Johnson &
+                                        Johnson vaccine</li>
+                                </ul>
+
+                                <p class="mt-5 fs-5 logo">Until the time that you are fully vaccinated, continue with
+                                    these
+                                    precautions:</p>
+
+                                <ul>
+                                    <li class=" ms-4 fs-5 logo">Wear a mask that covers your nose and mouth</li>
+                                    <li class=" ms-4 fs-5 logo">Stay six feet away from others who don’t live with you
+                                    </li>
+                                    <li class=" ms-4 fs-5 logo">Avoid crowds and poorly ventilated indoor spaces</li>
+                                    <li class=" ms-4 fs-5 logo">Wash your hands often with soap and water or use hand
+                                        sanitizer</li>
+                                </ul>
+
+                                <p class="mt-5 fs-5 logo">In addition, if you’ve been fully vaccinated but then are
+                                    around
+                                    someone who has COVID-19, you do not need to stay away from others or get tested
+                                    unless
+                                    you have symptoms.</p>
+
+                                <p class="mt-5 fs-5 logo">Continue to watch for symptoms of COVID-19. If you develop
+                                    symptoms, get tested and stay home and away from others.</p>
+                                <p class="mt-5 fs-5 logo">You also will still need to follow guidance at your workplace.
+                                </p>
+
+                                <p class="mt-2 text-black-50 h2">I lost my printed vaccination records. How do I access
+                                    them?</p>
+                                <p class="mt-5 fs-5 logo">A copy of your vaccination records can be accessed through
+                                    MyUHCare or requested from UH Medical Records.</p>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer Start-->
+
+        <div class="container bg-secondary bg-opacity-10 text-black-50">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="./index.html"><img class="rounded-circle mb-5  mt-5"
+                            src="./img/logo.jpg" width="60px" height="60px" alt=""><span
+                            class="fw-bold ms-2  fs-4 logo">Cambridge
+                            Hospital</span></a>
+
+                    <ul class="fs-6">
+
+                        <a class="cool-link text-black  pt-2 pe-3" href="./index.html">Privacy Policy</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Terms & Condition</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">For Employees</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">HIPAA Notice</a>
+
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Vacancies</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Non Discrimation Notice</a>
+
+                    </ul>
+
+                    <ul class="fst-italic pt-5">
+                        Copyright © 2022 Cambridge Hospital
+                    </ul>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p class="mt-5 fs-3 pt-2 text-black">Sign Up For Our E-Newsletter</p>
+                    <p class="mt-5 fs-5 ">Get health news and advice you need to live your best, delivered right to your
+                        inbox every month: The
+                        Healthy@UH e-newsletter.</p>
+                </div>
+
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-outline-danger mb-5 mt-5 btn-group-lg">Sign Up Now &nbsp;<i
+                            class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid bg-danger bg-opacity-10">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Karachi</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Karachi Branch</p>
+                    <p class="ps-5">Plot C-76, Sector 31/5, Opposite Millat Society
+                        Liaqtabab, Karachi -75190, Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Lahore</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Lahore Branch</p>
+                    <p class="ps-5 pb-3">Plot C-76, Sector 31/5, Opposite Lahore Main Metro Station, Lahore -726390,
+                        Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Donate Now</p> <br>
+                    <p class="fs-5 ps-5 cool-link">Doorstep Collection:</p>
+                    <p class="ps-5 pb-3">
+                        +923 111 111 880
+                        Karachi +92 21 111 111 880
+                        Lahore +92 42 111 111 880
+                        Donate in-person at our Collection Centers
+                        Write to us at:crd@tih.org.pk <br>
+                        <br>
+                        Cambridge Hospital & Health Network is a not-for-profit <br>
+                        company registered under section 42 of the <br>
+                        Companies Ordinance 1984. The company has tax exemptions <br>
+                        under the Income Tax Ordinance 2001. <br> <br>
+                        <br>
+                        Charity Registration No. PCP-R2/2019/234 <br>
+
+                        National Tax No. 3162706-4
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Quic Link</p>
+                    <p class="pt-3 ps-5"><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653377901&extra_1=s%7Cc%7C358050429110%7Ce%7Cfacebook%27%7C&placement=&creative=358050429110&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1653377901%26adgroupid%3D65139789042%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D9077140%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwjZmTBhB4EiwAynRmDxaQ4RkUNH16mIYaG4t1K4g85IQGYfHKU0HgExMZslbzhyOK9YNTNRoCbkUQAvD_BwE" class="text-danger fs-5"><i
+                                class="fa-brands fa-facebook"></i></a>&nbsp
+                        Facebook</p>
+                    <p class="pt-3 ps-5"><a href="https://www.instagram.com/?hl=en" class="text-danger fs-5"><i
+                                class="fa-brands fa-instagram"></i></a>&nbsp
+                        Instagram</p>
+                    <p class="pt-3 ps-5"><a href="mailto:huzaifakhanwaseem2233@gmail.com" class="text-danger fs-5"><i
+                                class="fa-solid fa-envelope"></i></a>&nbsp
+                        Gmail</p>
+                    <p class="pt-3 ps-5"><a href="https://twitter.com/i/flow/login" class="text-danger fs-5"><i
+                                class="fa-brands fa-twitter"></i></a>&nbsp
+                        Twitter</p>
+                    <p class="pt-3 ps-5"><a href="+923190283675" class="text-danger fs-5"><i class="fa-solid fa-phone"></i></a>&nbsp
+                        Call</p>
+                    <p class="pt-3 ps-5"><a href="https://www.youtube.com/channel/UCzdbICWRJ6hkE3qGAZCCCkw/featured" class="text-danger fs-5"><i
+                                class="fa-brands fa-youtube"></i></a>&nbsp
+                        Youtube</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-danger">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-white pt-3 fs-6 text-center">Copyright All Right Reserve © 2022 Cambridge Hospital
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer End -->
+    <script>
+        fetch("https://api.covid19api.com/summary").then(function (res) {
+            return res.json()
+        }).then(function (respon) {
+            console.log(respon)
+            var i;
+            for (i = 0; i < respon.length; i++) {
+                console.log(respon[1].NewConfirmed)
+
+            }
+            document.getElementById("pera").innerText = "New Worldwide Confirmed Cases" + "  " + "  " + "(" + respon.Global.NewConfirmed + ")"
+            document.getElementById("pera1").innerText = "New Deaths" + "  " + "  " + "(" + respon.Global.NewDeaths + ")"
+            document.getElementById("pera2").innerText = "Total Deaths Worldwide" + "  " + "  " + "(" + respon.Global.TotalDeaths + ")"
+        })
+
+
+        // Second Api
+
+        fetch("https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true").then(function (res) {
+            return res.json()
+        }).then(function (respon) {
+            console.log(respon)
+            var i;
+            for (i = 0; i < respon.length; i++) {
+                console.log(respon[1].infected)
+            }
+            document.getElementById("pera3").innerText = "In Pakistan Infected Cases" + "  " + "  " + "(" + respon[25].infected + ")"
+            document.getElementById("pera4").innerText = "In Pakistan Recovered Cases" + "  " + "  " + "(" + respon[25].recovered + ")"
+            document.getElementById("pera5").innerText = "In Pakistan Tested Cases" + "  " + "  " + "(" + respon[25].tested + ")"
+        })
+
+
+    </script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'></script>
+    <script src="./javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
