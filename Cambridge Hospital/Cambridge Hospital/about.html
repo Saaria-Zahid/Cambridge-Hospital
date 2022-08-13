@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- EXTERNAL LINK -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <style></style>
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <!-- extrnal link end -->
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <!-- AOS Animation link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cambridge Hospital</title>
+     <!-- Covid Api -->
+     <script>
+        fetch("https://api.covid19api.com/summary").then(function(res){
+                return res.json()
+            }).then(function(respon){
+                console.log(respon)
+                var i;
+            for(i=0;i<respon.length;i++){
+                console.log(respon[1].NewConfirmed)
+                
+            }
+            document.getElementById("pera").innerText = "New Worldwide Confirmed Cases" + "  " + "  " + "(" + respon.Global.NewConfirmed + ")"})
+
+
+            function topbtn(){
+    if(window.scrollY > 500){
+        document.getElementById("top").style.display = "block"
+    }
+    else{
+        document.getElementById("top").style.display = "none"
+        
+    }
+}
+</script>
+    <!-- api end -->
+</head>
+
+<body id="up" onscroll="topbtn()" >
+
+    <!-- <button  id="top" class="btn btn-secondary fw-bold logo rounded rounded-pill top" style="display: none;"><a class="text-decoration-none text-black" href="#top">Top</a></button>  -->
+    <a class="text-decoration-none text-black" href="#up"><i id="top" style="display: none;" class="fa-solid fa-angles-up top fs-3 text-danger"></i></a> 
+
+    <div>
+
+        <!-- Navbar Start -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container-fluid">
+                <div class="col-md-3">
+                <img class="img-fluid  navbar-brand" src="./img/corona.png" width="30px" height="30px" alt="">
+                <span class="logo fw-bold nav-1-ul active text-white">Covid-info</span>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav  fs-6 fw-bold mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./covid vacancine.html">Covid-19 Testing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./kids.html">Covid-19 Vaccine for Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./Vaccine for Adults.html">Covid-19 Vaccine for Adult</a>
+                        </li>
+                    </ul>
+                    <span class="pt-3 ps-1">
+                    <p id="pera" class="text-white nav-1-ul nav-link active fw-bold fs-6 text-end">No Internet Connection</p>
+                   </span>
+                </div>
+            
+
+        </nav>
+
+        <div class="container-fluid ">
+            <div class="row bg-secondary bg-opacity-10">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 fw-bold call fs-5 p-3">
+                    <i class="fa-solid call fa-phone"></i><span class="call"> Call to Schedule : +923190263875</span>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+
+
+
+                    <button class="btn btn-outline-danger m-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="fa-solid fa-calendar"></i>&nbsp Schedule Online</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header bg-danger text-white ">
+                            <p class="text-center pt-3" id="offcanvasRightLabel">Call to Schedule : +923190263875</p>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Neurologists
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-danger bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Family physicians
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-info bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Obstetricians and gynecologists.
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-dark bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light text-black sticky-md-top fixed-top bg-white nav">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold logo fs-5" href="./index.html"><img class="rounded-circle" src="./img/logo.jpg"
+                        width="50px" height="50px" alt="">&nbsp; Cambridge
+                        Hospital</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-font justify-content-center pe-5 me-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav fs-5 nav-2-item  ">
+                        <li class="nav-item">
+                            <a class="nav-link  cool-link " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link main-active cool-link" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./facility.html">Facility</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./CLINICAL-service.html">Clinical service</a></li>
+                                <li><a class="dropdown-item" href="./blood.html">Blood Center</a></li>
+                                <li><a class="dropdown-item" href="./outrech.html">Outrech Programs</a></li>
+                            </ul>
+
+
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./vacancies.html">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./donor.html">Donors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./location.html">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Doctors
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda Jabeen.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                            </ul>
+
+
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+      
+        <!-- Navbar End -->
+        <!-- Main About Page Start -->
+        <div class="bg-secondary bg-opacity-10">
+            <div class="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p data-aos="flip-down" class="fs-2 d-block cool-link fw-bold text-danger pt-5 pb-5">About
+                                Us</p>
+                            <p class="fs-5 fw-bold cool-link text-black-50 pb-5 logo">Welcome to Cambridge Hospital</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="fs-5 logo cool-link text-black">Every day thousands of people enter the gates of
+                                Cambridge
+                                Hospital seeking medical
+                                attention for themselves or their loved ones. With an undying commitment to excellence
+                                that
+                                meets international standards, regulations and quality systems, we make sure that the
+                                patient’s
+                                needs are met satisfactorily under a single roof. Cambridge Hospital is located in the
+                                center of the bustling city of Karachi near the National Cricket Stadium. Owing to this
+                                unique
+                                location has easy access from all quadrants of the city.
+
+                                Every day thousands of people enter the gates of Cambridge Hospital seeking medical
+                                attention for themselves or their loved ones. With an undying commitment to excellence
+                                that
+                                meets international standards,
+
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img data-aos="fade-down" class="img-thumbnail shadow-sm" src="./img/ch hospital.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class=" fs-6 cool-link  pb-5 text-black">Cambridge Hospital was conceived 60 years ago as
+                                a not-for-profit organization with a vision to provide quality
+                                healthcare at an affordable cost to all socioeconomic classes. Over the years, the
+                                hospital has
+                                evolved to become the largest tertiary care hospital in the country with more than 700
+                                beds. We
+                                also have the largest number of ICU beds and ventilators in the city. The hospital
+                                excels in all
+                                facets of medicine, surgery, diagnostics and medical support services houses more than
+                                35
+                                specialties. Considering patient’s care as priority, we provide 24 hour emergency
+                                services,
+                                acute care, inpatient, outpatient and day care facilities not only to the city but also
+                                to
+                                patients from the far reaching corners of Sindh, Balochistan, Khyber Pakhtunkhwa and
+                                Punjab.
+
+                                Cambridge Hospital has pioneered in a number of specialties such as breast surgery, hand
+                                surgery, arthroscopy
+                                and LASIK. We are also developing other sub-specialties like Paediatric Development
+                                Unit, Sports
+                                Injury Unit, Geriatric medicine, Paediatric Cardiology and Colchlear implant procedure.
+                                These
+                                disciplines are headed by highly specialized and trained doctors. Liaquat National
+                                Hospital is
+                                renowned for its post graduate training and fellowships in multiple surgical and medical
+                                specialties and subspecialties. We have a close affiliation with College of Physicians
+                                and
+                                Surgeons of Pakistan. We also enjoy the privilege of being a principal teaching hospital
+                                recognized by the different Royal Colleges of the United Kingdom, Scotland and Ireland.
+
+                                We take pride in the fact that we serve with compassion, empathy and utmost care in case
+                                of any
+                                emergencies, accidents or calamities that occur in the city. We believe that anyone and
+                                everyone
+                                who needs medical attention is our concern. The doors of Liaquat National Hospital are
+                                ever
+                                welcoming to those in need. Affordable consultation and treatment along with the latest
+                                facilities and availability of social welfare services for financial sponsorship has
+                                earned
+                                the name of “The Last Resort” for patients both locally and nationally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p data-aos="fade-down"
+                        class="text-center cool-link d-block text-danger fw-bold fs-2 pb-5 pt-5">Vision, Mission and
+                        Core Values</p>
+                    <p class="text-black-50 fs-5 fw-bold">Vision</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        To be a leading patient care services provider in the country and a pioneer in healthcare
+                        education.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        To be a quality healthcare provider to all individuals and excel in medical education.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        We inspire to be the first choice for medical care and a pioneer in healthcare education.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        To bring the best in healthcare and health education.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        To excel in healthcare services in timely and competent manner and produce the best healthcare
+                        professionals.</p>
+
+                </div>
+                <div class="col-md-12">
+                    <p class="text-black-50 fs-5 fw-bold">&nbsp Mission</p>
+                    <p class="text-black-50 fs-6 text-danger fw-bold">&nbsp Cambridge Hospital Is an</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        A non commercial and non-profit organization.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        Open to everyone and affordable to all.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        A forum for academics and research.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        A provider of quality medical diagnosis and care.</p>
+                    <p class="text-black-50 fw-bold pb-5 pt-5 fs-6"><i
+                            class="fa-solid text-danger fa-angles-right"></i>&nbsp We offer affordable and quality
+                        medical diagnosis and treatment to all and provide an intellectual forum for academics and
+                        research.</p>
+
+                </div>
+                <div class="col-md-12">
+                    <p class="text-black-50 fs-5 fw-bold">Core Values</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        Focus on quality, education, research and career is fundamental to the ideology and practice of
+                        our organization.</p>
+                    <p class="text-black-50 fw-bold ms-5 fs-6"><i class="fa-solid text-danger fa-angles-right"></i>&nbsp
+                        We pursue integrity, show respect, maintain professional development and support team work.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-secondary bg-opacity-10 mb-2">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="fw-bold fs-3 pt-5 pb-3 text-danger">Our Administration</p>
+                    <img data-aos="zoom-out" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/salmanfaridi.jpg" alt="">
+                    <p class="fw-bold fs-5 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-danger">Medical Director</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img data-aos="fade-up" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/AkberallyAmirally.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img data-aos="zoom-out" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/AnwerAli.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img data-aos="fade-up" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/nafisadoosa.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img data-aos="zoom-out" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/nafisadoosa.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img data-aos="fade-up" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/naseemahmed.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img data-aos="zoom-out" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/nafisadoosa.jpg" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <img data-aos="fade-up" class="img-fluid shadow shadow-sm" width="100px" height="100px"
+                        src="./img/Raheel.jfif" alt="">
+                    <p class="fw-bold fs-6 pt-5 text-danger">Prof. Dr. Salman Faridi</p>
+                    <p class="fw-bold fs-6 pb-3 text-black-50">Medical Director</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-5 mt-5">
+                    <p class="fs-1 logo">Primary and Specialty Health Care Services for Adults and Children</p>
+                    <p class="fs-5 logo">University Hospitals provides complete, high-quality health services at
+                        locations throughout
+                        Northeast Ohio. This includes 11 regional hospitals, more than 40 health centers, and a network
+                        of physician practices. Our medical services range from primary and preventive care to specialty
+                        medical and surgical care for complex diseases. </p>
+                    <p class="fs-5 logo">As one of the best hospitals in Ohio, we offer the most advanced diagnosis and
+                        hospital services
+                        for the full spectrum of medical conditions, including:</p>
+
+                </div>
+                <div class="col-md-1"></div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="col-md-4 bg-secondary bg-opacity-25 mb-5 mt-5 shadow">
+                    <p class="logo fs-3 cool-link p-3">Make An Appointment</p>
+                    <p class="ps-3 fs-5 text-black-50 fw-bold">Your health is important. Don’t delay care.</p>
+                    <p class="logo fs-5 text-black-50 ps-3">Offering in-person, video and telephone visits. Call today
+                        to see which option is right for you.</p>
+                    <p class="fw-bold fs-5 ps-3 cool-link text-black-50">+923190283675</p>
+                    <a class="nav-link" href="#"><button
+                            class="btn btn-outline-light d-block text-danger border-0">Learn More About
+                            Virtual</button></a>
+                </div>
+                <div class="col-md-12">
+                    <p class="fs-5 pb-5 pt-5">We also provide emergency and trauma care for the most serious illnesses
+                        and injuries, including
+                        the region’s only Level 1 pediatric trauma center at UH Rainbow Babies & Children’s Hospital. In
+                        addition, UH is home to the region’s largest network of family medicine and pediatric primary
+                        care providers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row bg-secondary bg-opacity-10">
+                <div class="col-md-12">
+                    <p data-aos="fade-right" class="fs-1 fw-bold text-danger cool-link pt-1">HOW WE STARTED</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img data-aos="fade-right" class="img-fluid w-25 mt-3" src="./img/ch hospital.jpg" alt="">
+                    <p class="fs-5 text-black-50 fw-bold pt-3 logo">Initiated by a group of professionals with the support of some philanthropists and businessmen,
+                        in 2007, The Cambridge Hospital(TIH) started its journey with a purpose to provide indiscriminate,
+                        quality healthcare to all in a state-of-the-art, paperless hospital in Karachi.</p>
+                        <img data-aos="fade-right" class="img-fluid w-25 mt-3" src="./img/hospital-721239_1920.jpg" alt="">
+                        <p class="fs-5 text-black-50 fw-bold pt-3 logo">Founder, Dr. Abdul Bari Khan, and other co-founders served in the public sector for many years where they saw the dismal condition of the government-run hospitals and witnessed the plight of the poverty-stricken patients of the metropolis.</p>
+                        <p class="fs-5 text-black-50 fw-bold pt-3 logo">It was at this time they envisioned the creation of a multi-disciplinary tertiary care hospital that would serve the under-privileged population of Karachi with free and quality care.
+
+                            After a few years, in 2005, the Islamic Mission Trust donated a non-functioning hospital building in Korangi, Karachi which was renovated and made operational in 2007.</p>
+                            <img data-aos="fade-right" class="img-fluid mt-3 w-25" src="./img/mri-2813899_1920.jpg" alt="">
+                            <p class="fs-5 text-black-50 fw-bold pt-3 logo">The Cambridge Hospital was set up as tertiary care and multi-disciplinary hospital with 150 beds. For the last 13 years, The Cambridge Hospital has been serving the people of the country through its free-of-cost services.</p>
+                            <p class="fs-5 text-black-50 fw-bold pt-3 logo">TIH which has now evolved into Cambridge Hospital and Health Network (IHHN) has been working to alleviate the burden of healthcare on the nation by providing quality healthcare services. The Network consists of 13 hospitals [four owned and managed by IHHN and eight managed by the Network under the Public-Private Partnership with the governments of Sindh and Punjab), four Regional Blood Centers [Karachi, Multan, Bahawalpur, and Jamshoro], four Physical Rehabilitation Centers [Karachi, Lahore, Muzaffargarh, and Badin], Pakistan’s largest Pediatric Oncology Services Unit, a network of primary care centers, and a large number of public health initiatives across Pakistan.</p>
+                            <p class="fs-5 text-black-50 fw-bold pt-3 logo">Patient-centric care is the cornerstone of Indus’ healthcare system as it continues to serve the nation with free, indiscriminate, and holistic healthcare.</p>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="shadow text-danger text-decoration-underline">
+        <!-- About Page End -->
+        <!-- Footer Start-->
+
+        <div class="container-fluid bg-secondary bg-opacity-10 text-black-50">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="./index.html"><img class="rounded-circle mb-5  mt-5"
+                            src="./img/logo.jpg" width="60px" height="60px" alt=""><span
+                            class="fw-bold ms-2  fs-4 logo">Cambridge
+                            Hospital</span></a>
+
+                    <ul class="fs-6">
+
+                        <a class="cool-link text-black  pt-2 pe-3" href="./index.html">Privacy Policy</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Terms & Condition</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">For Employees</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">HIPAA Notice</a>
+
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Vacancies</a>
+
+                        <a class="cool-link text-black pt-2 pe-3" href="#">Non Discrimation Notice</a>
+
+                    </ul>
+
+                    <ul class="fst-italic pt-5">
+                        Copyright © 2022 Cambridge Hospital
+                    </ul>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p class="mt-5 fs-3 pt-2 text-black">Sign Up For Our E-Newsletter</p>
+                    <p class="mt-5 fs-5 ">Get health news and advice you need to live your best, delivered right to your
+                        inbox every month: The
+                        Healthy@UH e-newsletter.</p>
+                </div>
+
+                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-outline-danger mb-5 mt-5 btn-group-lg">Sign Up Now &nbsp;<i
+                            class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid bg-danger bg-opacity-10">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Karachi</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Karachi Branch</p>
+                    <p class="ps-5">Plot C-76, Sector 31/5, Opposite Millat Society
+                        Liaqtabab, Karachi -75190, Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+
+                    <p class="fw-bold p-5 fs-5 cool-link">Address Lahore</p>
+                    <p class="ps-5 fs-5 cool-link">Cambridge Hospital Lahore Branch</p>
+                    <p class="ps-5 pb-3">Plot C-76, Sector 31/5, Opposite Lahore Main Metro Station, Lahore -726390,
+                        Pakistan
+                        T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Donate Now</p> <br>
+                    <p class="fs-5 ps-5 cool-link">Doorstep Collection:</p>
+                    <p class="ps-5 pb-3">
+                        +923 111 111 880
+                        Karachi +92 21 111 111 880
+                        Lahore +92 42 111 111 880
+                        Donate in-person at our Collection Centers
+                        Write to us at:crd@tih.org.pk <br>
+                        <br>
+                        Cambridge Hospital & Health Network is a not-for-profit <br>
+                        company registered under section 42 of the <br>
+                        Companies Ordinance 1984. The company has tax exemptions <br>
+                        under the Income Tax Ordinance 2001. <br> <br>
+                        <br>
+                        Charity Registration No. PCP-R2/2019/234 <br>
+
+                        National Tax No. 3162706-4
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="fw-bold p-5 fs-5 cool-link">Quic Link</p>
+                    <p class="pt-3 ps-5"><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653377901&extra_1=s%7Cc%7C358050429110%7Ce%7Cfacebook%27%7C&placement=&creative=358050429110&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1653377901%26adgroupid%3D65139789042%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D9077140%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwjZmTBhB4EiwAynRmDxaQ4RkUNH16mIYaG4t1K4g85IQGYfHKU0HgExMZslbzhyOK9YNTNRoCbkUQAvD_BwE" class="text-danger fs-5"><i
+                                class="fa-brands fa-facebook"></i></a>&nbsp
+                        Facebook</p>
+                    <p class="pt-3 ps-5"><a href="https://www.instagram.com/?hl=en" class="text-danger fs-5"><i
+                                class="fa-brands fa-instagram"></i></a>&nbsp
+                        Instagram</p>
+                    <p class="pt-3 ps-5"><a href="mailto:huzaifakhanwaseem2233@gmail.com" class="text-danger fs-5"><i
+                                class="fa-solid fa-envelope"></i></a>&nbsp
+                        Gmail</p>
+                    <p class="pt-3 ps-5"><a href="https://twitter.com/i/flow/login" class="text-danger fs-5"><i
+                                class="fa-brands fa-twitter"></i></a>&nbsp
+                        Twitter</p>
+                    <p class="pt-3 ps-5"><a href="+923190283675" class="text-danger fs-5"><i class="fa-solid fa-phone"></i></a>&nbsp
+                        Call</p>
+                    <p class="pt-3 ps-5"><a href="https://www.youtube.com/channel/UCzdbICWRJ6hkE3qGAZCCCkw/featured" class="text-danger fs-5"><i
+                                class="fa-brands fa-youtube"></i></a>&nbsp
+                        Youtube</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-danger">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-white pt-3 fs-6 text-center">Copyright All Right Reserve © 2022 Cambridge Hospital
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer End -->
+   <script>
+
+ 
+   </script>
+    <script type='text/javascript'></script>
+    <script src="javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

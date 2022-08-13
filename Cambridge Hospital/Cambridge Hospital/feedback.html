@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- EXTERNAL LINK -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <style></style>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <!-- extrnal link end -->
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <!-- AOS Animation link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cambridge Hospital</title>
+     <!-- Covid Api -->
+     <script>
+        fetch("https://api.covid19api.com/summary").then(function(res){
+                return res.json()
+            }).then(function(respon){
+                console.log(respon)
+                var i;
+            for(i=0;i<respon.length;i++){
+                console.log(respon[1].NewConfirmed)
+                
+            }
+            document.getElementById("pera").innerText = "New Worldwide Confirmed Cases" + "  " + "  " + "(" + respon.Global.NewConfirmed + ")"})
+    </script>
+    <!-- api end -->
+</head>
+
+<body>
+
+
+    <div>
+
+        <!-- Navbar Start -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container-fluid">
+                <div class="col-md-3">
+                <img class="img-fluid  navbar-brand" src="./img/corona.png" width="30px" height="30px" alt="">
+                <span class="logo fw-bold nav-1-ul active text-white">Covid-info</span>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav  fs-6 fw-bold mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./covid vacancine.html">Covid-19 Testing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./kids.html">Covid-19 Vaccine for Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-1-ul active" href="./Vaccine for Adults.html">Covid-19 Vaccine for Adult</a>
+                        </li>
+                    </ul>
+                    <span class="pt-3 ps-1">
+                    <p id="pera" class="text-white nav-1-ul nav-link active fw-bold fs-6 text-end">No Internet Connection</p>
+                   </span>
+                </div>
+            
+
+        </nav>
+
+        <div class="container-fluid ">
+            <div class="row bg-secondary bg-opacity-10">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 fw-bold call fs-5 p-3">
+                    <i class="fa-solid call fa-phone"></i><span class="call"> Call to Schedule : +923190263875</span>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+
+
+
+                    <button class="btn btn-outline-danger m-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                            class="fa-solid fa-calendar"></i>&nbsp Schedule Online</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header bg-danger text-white ">
+                            <p class="text-center pt-3" id="offcanvasRightLabel">Call to Schedule : +923190263875</p>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Neurologists
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-danger bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Family physicians
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-info bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Obstetricians and gynecologists.
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="bg-dark bg-opacity-10">
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda
+                                                        Jabeen.</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="flush-headingThree"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light text-black sticky-md-top fixed-top bg-white nav">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold logo fs-5" href="./index.html"><img class="rounded-circle" src="./img/logo.jpg"
+                    width="50px" height="50px" alt="">&nbsp; Cambridge
+                    Hospital</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-font justify-content-center pe-5 me-5" id="navbarNavDropdown">
+                    <ul class="navbar-nav fs-5 nav-2-item  ">
+                        <li class="nav-item">
+                            <a class="nav-link  cool-link " href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./facility.html">Facility</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./CLINICAL-service.html">Clinical service</a></li>
+                                <li><a class="dropdown-item" href="./blood.html">Blood Center</a></li>
+                                <li><a class="dropdown-item" href="./outrech.html">Outrech Programs</a></li>
+                            </ul>
+
+
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./vacancies.html">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./donor.html">Donors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cool-link" href="./location.html">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link main-active cool-link" href="./feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Doctors
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Shahid Siddique.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Asst. Prof. Dr. Farkhanda Jabeen.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Munawar Hayat Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Nadia Asma Ahmed.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Javed Akram.</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ommaya. Ayub Khan </a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Riasat Ali Khan</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Qasim Shah M.B.B.S</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Ayyob Zafar</a></li>
+                                <li><a class="dropdown-item" href="./facility.html">Dr. Naveed Iftkhar</a></li>
+                            </ul>
+
+
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar End -->
+        <form action="">
+<div class="m-form container-fluid ">
+    <div class="row ">
+        <div class="col-md-12">
+            <p class="logo text-danger fw-bold pt-5 fs-1 ">Patient Feedback/Suggestions Form</p>
+            <p class="logo text-danger fw-bold fs-3">Please Give Your Feedback</p>
+            <p class="logo w-75 fs-5">We are grateful to you for giving us the opportunity to serve you. To help us
+                in our Endeavour to
+                serve you better we sincerely request you to kindly give us your opinion and suggestions on the
+                hospitals out – patients services by checking the appropriate box. Your identity will remain
+                confidential at all times. We appreciate your feedback and assure you of our best services
+                always.</p>
+        </div>
+        <div class="row justify-content-center bg3">
+        <div class="col-md-8 border border-3 mt-3 mb-3 border-danger bg-white bg-opacity-75">
+            <div class="container-fluid">
+                <div class="row shadow ">
+                    <div class="container-fluid mt-5">
+                        <div class="row">
+                            <p class="logo text-danger pb-4 fw-bold fs-3">Please Give Your Feedback</p>
+                            <div class="col">
+                                <label  class="logo pb-3 fs-6 fw-bold" for="fname">Please Enter Your First Name</label>
+                                <input id="fname"  type="text" class="form-control my-form-control" placeholder="First name" aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <label class="logo pb-3 fs-6 fw-bold" for="fname">Please Enter Your Last Name</label>
+                                <input id="lname"  type="text" class="form-control my-form-control" placeholder="Last name" aria-label="Last name">
+                            </div>
+                        </div>
+                        <form class="row g-3" action="submit.html">
+                            <div class="col-md-12">
+                                <label class="logo pb-3  pt-5
+    pb-1 fs-6 fw-bold" for="inputEmail4" class="form-label">Please Enter Your Email</label>
+                                <input  type="email" class="form-control my-form-control" placeholder="Please Enter Your Email" id="inputEmail4">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="logo pb-3 pt-5
+    pb-1 fs-6 fw-bold" for="inputPassword4" class="form-label">Password</label>
+                                <input placeholder="Password"  type="password" class="form-control my-form-control" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control my-form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-12">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control my-form-control" id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputCity" class="form-label">City</label>
+                                <input placeholder="Your City" type="text" class="form-control my-form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputState" class="form-label">State</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>Sindh</option>
+                                    <option>Punjab</option>
+                                    <option>KPK</option>
+                                    <option>Balochistan</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputZip" class="form-label">Zip</label>
+                                <input placeholder="ZIP"  type="text" class="form-control my-form-control" id="inputZip">
+                            </div>
+                            
+                                <div class="col-md-4">
+                                    <label class="logo pb-3 pt-5
+        pt-5
+        pb-1 fs-6 fw-bold" for="inputState" class="form-label">Gender</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Please Choose</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">
+                                    <label class="logo pb-3 pt-5
+        pt-5
+        pb-1 fs-6 fw-bold" for="inputState" class="form-label">Birth Date</label>
+                                    <input  placeholder="" class="form-control text-white my-form-control input-group-sm" type="date" name="" id="">
+                                </div>
+                            </div>
+                            <div class="col-12 shadow">
+                                <label class="logo pb-3 pt-5
+    pt-5
+    pb-1 fs-6 fw-bold" for="inputState" class="form-label">Let Us Know Your Valuable opinion How can we improve our service?</label>
+                                <div class="form-floating mt-3">
+                                    <textarea class="form-control my-form-control mb-5" placeholder="Type here...." id="floatingTextarea"></textarea>
+                                    
+                                  </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row shadow mt-1 mb-1 text-center">
+                        <p></p>
+                        <div class="col-md-4">
+                            <p class="logo fw-bold">Doctors Knowledge</p>
+                          </div>
+                      
+                        <div class="col-md-2">
+                            <p class="logo">Unsatisfied</p>
+                          <input class="form-check-input" type="radio" name="radio1" id="radio2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Neutral</p>
+                          <input class="form-check-input" type="radio" name="radio1" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Fine</p>
+                          <input class="form-check-input" type="radio" name="radio1" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Setisfied</p>
+                          <input class="form-check-input" type="radio" name="radio1" id="2" checked>
+                        </div>
+                       
+                    </div>
+                    <div class="row  shadow mt-1 mb-1 text-center">
+                        <p></p>
+                        <div class="col-md-4">
+                            <p class="logo fw-bold">Nurse Patience</p>
+                          </div>
+                      
+                        <div class="col-md-2">
+                            <p class="logo">Unsatisfied</p>
+                          <input class="form-check-input" type="radio" name="radio2" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Neutral</p>
+                          <input class="form-check-input" type="radio" name="radio2" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Fine</p>
+                          <input class="form-check-input" type="radio" name="radio2" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Setisfied</p>
+                          <input class="form-check-input" type="radio" name="radio2" id="2" checked>
+                        </div>
+                       
+                    </div>
+                    <div class="row  shadow mt-1 mb-1 text-center">
+                        <p></p>
+                        <div class="col-md-4">
+                            <p class="logo fw-bold">Doctor Kindness</p>
+                          </div>
+                      
+                        <div class="col-md-2">
+                            <p class="logo">Unsatisfied</p>
+                          <input class="form-check-input" type="radio" name="radio3" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Neutral</p>
+                          <input class="form-check-input" type="radio" name="radio3" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Fine</p>
+                          <input class="form-check-input" type="radio" name="radio3" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Setisfied</p>
+                          <input class="form-check-input" type="radio" name="radio3" id="2" checked>
+                        </div>
+                       
+                    </div>
+                    <div class="row  shadow mt-1 mb-1 text-center">
+                        <p></p>
+                        <div class="col-md-4">
+                            <p class="logo fw-bold">Waiting Time</p>
+                          </div>
+                      
+                        <div class="col-md-2">
+                            <p class="logo">Unsatisfied</p>
+                          <input class="form-check-input" type="radio" name="radio4" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Neutral</p>
+                          <input class="form-check-input" type="radio" name="radio4" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Fine</p>
+                          <input class="form-check-input" type="radio" name="radio4" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Setisfied</p>
+                          <input class="form-check-input" type="radio" name="radio4" id="2" checked>
+                        </div>
+                       
+                    </div>
+                    <div class="row  shadow mt-1 mb-1 text-center">
+                        <p></p>
+                        <div class="col-md-4">
+                            <p class="logo fw-bold">Hygiene</p>
+                          </div>
+                      
+                        <div class="col-md-2">
+                            <p class="logo">Unsatisfied</p>
+                          <input class="form-check-input" type="radio" name="radio5" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Neutral</p>
+                          <input class="form-check-input" type="radio" name="radio5" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Fine</p>
+                          <input class="form-check-input" type="radio" name="radio5" id="2">
+                        </div>
+                        <div class="col-md-2">
+                            <p class="logo">Setisfied</p>
+                          <input class="form-check-input" type="radio" name="radio5" id="2" checked>
+                        </div>
+                       
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+
+<span class="fw-bold text-danger logo" id="error"></span>
+                                <!-- Button trigger modal -->
+<button id="submit" type="button" class="btn btn-outline-danger fw-bold mt-3  mb-3 me-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Submit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bold logo text-black" id="modalp"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-xmark text-white "></i></button>
+        <button type="button" onclick="okclick()" class="btn btn-danger" id="ok"><i class="fa-solid fa-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+                    <input class="btn btn-outline-danger fw-bold mt-3 mb-3 ms-1" type="reset" value="Reset">
+                </div>
+
+              </div>
+                </div>
+              
+    </div>
+</div>
+
+
+</form>
+</div>
+<!-- Footer Start-->
+
+      <div class="container-fluid bg-secondary bg-opacity-10 text-black-50">
+        <div class="row">
+            <div class="col-md-6">
+                <a class="navbar-brand" href="./index.html"><img class="rounded-circle mb-5  mt-5"
+                        src="./img/logo.jpg" width="60px" height="60px" alt=""><span
+                        class="fw-bold ms-2  fs-4 logo">Cambridge
+                        Hospital</span></a>
+
+                <ul class="fs-6">
+
+                    <a class="cool-link text-black  pt-2 pe-3" href="./index.html">Privacy Policy</a>
+
+                    <a class="cool-link text-black pt-2 pe-3" href="#">Terms & Condition</a>
+
+                    <a class="cool-link text-black pt-2 pe-3" href="#">For Employees</a>
+
+                    <a class="cool-link text-black pt-2 pe-3" href="#">HIPAA Notice</a>
+
+
+                    <a class="cool-link text-black pt-2 pe-3" href="#">Vacancies</a>
+
+                    <a class="cool-link text-black pt-2 pe-3" href="#">Non Discrimation Notice</a>
+
+                </ul>
+
+                <ul class="fst-italic pt-5">
+                    Copyright © 2022 Cambridge Hospital
+                </ul>
+
+                <br>
+
+            </div>
+
+            <div class="col-md-4">
+                <p class="mt-5 fs-3 pt-2 text-black">Sign Up For Our E-Newsletter</p>
+                <p class="mt-5 fs-5 ">Get health news and advice you need to live your best, delivered right to your
+                    inbox every month: The
+                    Healthy@UH e-newsletter.</p>
+            </div>
+
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <button class="btn btn-outline-danger mb-5 mt-5 btn-group-lg">Sign Up Now &nbsp;<i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid bg-danger bg-opacity-10">
+        <div class="row">
+
+            <div class="col-md-4">
+                <p class="fw-bold p-5 fs-5 cool-link">Address Karachi</p>
+                <p class="ps-5 fs-5 cool-link">Cambridge Hospital Karachi Branch</p>
+                <p class="ps-5">Plot C-76, Sector 31/5, Opposite Millat Society
+                    Liaqtabab, Karachi -75190, Pakistan
+                    T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+
+                <p class="fw-bold p-5 fs-5 cool-link">Address Lahore</p>
+                <p class="ps-5 fs-5 cool-link">Cambridge Hospital Lahore Branch</p>
+                <p class="ps-5 pb-3">Plot C-76, Sector 31/5, Opposite Lahore Main Metro Station, Lahore -726390,
+                    Pakistan
+                    T: +92 21 351 127 09-17 | F: +92 21 351 127 18</p>
+            </div>
+
+            <div class="col-md-4">
+                <p class="fw-bold p-5 fs-5 cool-link">Donate Now</p> <br>
+                <p class="fs-5 ps-5 cool-link">Doorstep Collection:</p>
+                <p class="ps-5 pb-3">
+                    +923 111 111 880
+                    Karachi +92 21 111 111 880
+                    Lahore +92 42 111 111 880
+                    Donate in-person at our Collection Centers
+                    Write to us at:crd@tih.org.pk <br>
+                    <br>
+                    Cambridge Hospital & Health Network is a not-for-profit <br>
+                    company registered under section 42 of the <br>
+                    Companies Ordinance 1984. The company has tax exemptions <br>
+                    under the Income Tax Ordinance 2001. <br> <br>
+                    <br>
+                    Charity Registration No. PCP-R2/2019/234 <br>
+
+                    National Tax No. 3162706-4
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p class="fw-bold p-5 fs-5 cool-link">Quic Link</p>
+                <p class="pt-3 ps-5"><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653377901&extra_1=s%7Cc%7C358050429110%7Ce%7Cfacebook%27%7C&placement=&creative=358050429110&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1653377901%26adgroupid%3D65139789042%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D9077140%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwjZmTBhB4EiwAynRmDxaQ4RkUNH16mIYaG4t1K4g85IQGYfHKU0HgExMZslbzhyOK9YNTNRoCbkUQAvD_BwE" class="text-danger fs-5"><i
+                            class="fa-brands fa-facebook"></i></a>&nbsp
+                    Facebook</p>
+                <p class="pt-3 ps-5"><a href="https://www.instagram.com/?hl=en" class="text-danger fs-5"><i
+                            class="fa-brands fa-instagram"></i></a>&nbsp
+                    Instagram</p>
+                <p class="pt-3 ps-5"><a href="mailto:huzaifakhanwaseem2233@gmail.com" class="text-danger fs-5"><i
+                            class="fa-solid fa-envelope"></i></a>&nbsp
+                    Gmail</p>
+                <p class="pt-3 ps-5"><a href="https://twitter.com/i/flow/login" class="text-danger fs-5"><i
+                            class="fa-brands fa-twitter"></i></a>&nbsp
+                    Twitter</p>
+                <p class="pt-3 ps-5"><a href="+923190283675" class="text-danger fs-5"><i class="fa-solid fa-phone"></i></a>&nbsp
+                    Call</p>
+                <p class="pt-3 ps-5"><a href="https://www.youtube.com/channel/UCzdbICWRJ6hkE3qGAZCCCkw/featured" class="text-danger fs-5"><i
+                            class="fa-brands fa-youtube"></i></a>&nbsp
+                    Youtube</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-danger">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-white pt-3 fs-6 text-center">Copyright All Right Reserve © 2022 Cambridge Hospital
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- Footer End -->
+
+</script>
+<script src="javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
